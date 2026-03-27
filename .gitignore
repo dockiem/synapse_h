@@ -1,0 +1,7 @@
+bin/
+obj/
+.vs/
+*.user
+dead_letter/
+.claude/
+Take Home Instructions.*

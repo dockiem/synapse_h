@@ -1,0 +1,65 @@
+[
+  {
+    "order_id": "ORD-001",
+    "customer_zip": "10015",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "WC-STD-001",
+        "quantity": 1
+      },
+      {
+        "product_code": "OX-PORT-024",
+        "quantity": 1
+      }
+    ],
+    "priority": "standard",
+    "notes": "Simple order - wheelchair + oxygen, should have multiple supplier options in NYC"
+  },
+  {
+    "order_id": "ORD-002",
+    "customer_zip": "77059",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "HB-FUL-018",
+        "quantity": 1
+      },
+      {
+        "product_code": "PL-ELEC-043",
+        "quantity": 1
+      },
+      {
+        "product_code": "CM-BED-048",
+        "quantity": 1
+      },
+      {
+        "product_code": "BP-AUTO-077",
+        "quantity": 1
+      }
+    ],
+    "priority": "rush",
+    "notes": "Larger order with multiple categories - tests consolidation logic"
+  },
+  {
+    "order_id": "ORD-003",
+    "customer_zip": "02130",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "CP-STD-031",
+        "quantity": 1
+      },
+      {
+        "product_code": "CP-MSK-FF-035",
+        "quantity": 2
+      },
+      {
+        "product_code": "NB-COMP-039",
+        "quantity": 1
+      }
+    ],
+    "priority": "standard",
+    "notes": "Respiratory-focused order - mail order allowed, should match to respiratory specialists"
+  }
+]

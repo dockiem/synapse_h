@@ -1,0 +1,1661 @@
+[
+  {
+    "order_id": "TEST-001",
+    "customer_zip": "10014",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "WC-STD-001",
+        "quantity": 1
+      },
+      {
+        "product_code": "OX-PORT-024",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-002",
+    "customer_zip": "77059",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "CN-STD-063",
+        "quantity": 2
+      },
+      {
+        "product_code": "CS-KH-15-085",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-003",
+    "customer_zip": "02131",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "CP-STD-031",
+        "quantity": 1
+      },
+      {
+        "product_code": "CP-MSK-FF-035",
+        "quantity": 2
+      },
+      {
+        "product_code": "NB-COMP-039",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-004",
+    "customer_zip": "60640",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "KS-STD-073",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-005",
+    "customer_zip": "90210",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "HB-FUL-018",
+        "quantity": 1
+      },
+      {
+        "product_code": "PL-ELEC-043",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-006",
+    "customer_zip": "11205",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "CM-BED-048",
+        "quantity": 1
+      },
+      {
+        "product_code": "CN-QUAD-064",
+        "quantity": 1
+      },
+      {
+        "product_code": "TU-DUAL-102",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-007",
+    "customer_zip": "10003",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "NB-ULTR-040",
+        "quantity": 1
+      },
+      {
+        "product_code": "BB-LUM-090",
+        "quantity": 1
+      },
+      {
+        "product_code": "HP-ELEC-106",
+        "quantity": 1
+      },
+      {
+        "product_code": "IM-KNEE-110",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-008",
+    "customer_zip": "77076",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "CM-DROP-049",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-009",
+    "customer_zip": "02155",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "WK-STD-009",
+        "quantity": 1
+      },
+      {
+        "product_code": "CN-FLD-066",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-010",
+    "customer_zip": "60615",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "WC-PWR-007",
+        "quantity": 1
+      },
+      {
+        "product_code": "PL-STS-045",
+        "quantity": 1
+      },
+      {
+        "product_code": "SC-STD-053",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-011",
+    "customer_zip": "11369",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "OX-STAT-025",
+        "quantity": 1
+      },
+      {
+        "product_code": "OX-PULOX-030",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-012",
+    "customer_zip": "10018",
+    "mail_order": false,
+    "items": []
+  },
+  {
+    "order_id": "TEST-013",
+    "customer_zip": "10007",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "CP-BI-032",
+        "quantity": 1
+      },
+      {
+        "product_code": "CP-HUM-038",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-014",
+    "customer_zip": "77013",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "WC-LW-003",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-015",
+    "customer_zip": "02175",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "GL-STD-081",
+        "quantity": 1
+      },
+      {
+        "product_code": "CR-AXL-068",
+        "quantity": 1
+      },
+      {
+        "product_code": "NB-PED-042",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-016",
+    "customer_zip": "60623",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "CM-BAR-050",
+        "quantity": 1
+      },
+      {
+        "product_code": "WC-BAR-004",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-017",
+    "customer_zip": "11217",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "CM-FLD-051",
+        "quantity": 2
+      },
+      {
+        "product_code": "CP-AUTO-033",
+        "quantity": 1
+      },
+      {
+        "product_code": "BB-TLSO-092",
+        "quantity": 1
+      },
+      {
+        "product_code": "CN-OFF-065",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-018",
+    "customer_zip": "10058",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "HB-SEM-017",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-019",
+    "customer_zip": "77025",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "OX-TANK-E-026",
+        "quantity": 3
+      },
+      {
+        "product_code": "CC-SOFT-098",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-020",
+    "customer_zip": "90015",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "CP-TRV-034",
+        "quantity": 1
+      },
+      {
+        "product_code": "CP-MSK-N-036",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-021",
+    "customer_zip": "11410",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "BP-AUTO-077",
+        "quantity": 1
+      },
+      {
+        "product_code": "GL-CGM-082",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-022",
+    "customer_zip": "10460",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "PL-PORT-047",
+        "quantity": 1
+      },
+      {
+        "product_code": "SC-TRNB-054",
+        "quantity": 1
+      },
+      {
+        "product_code": "HP-MOIST-107",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-023",
+    "customer_zip": "60653",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "WK-ROL-010",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-024",
+    "customer_zip": "02141",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "RL-STD-058",
+        "quantity": 1
+      },
+      {
+        "product_code": "CR-FOR-069",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-025",
+    "customer_zip": "77088",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "WC-REC-006",
+        "quantity": 1
+      },
+      {
+        "product_code": "OX-CONS-029",
+        "quantity": 2
+      },
+      {
+        "product_code": "CN-WHT-067",
+        "quantity": 1
+      },
+      {
+        "product_code": "HP-IR-108",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-026",
+    "customer_zip": "10059",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "PL-CEIL-046",
+        "quantity": 1
+      },
+      {
+        "product_code": "HB-LOW-020",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-027",
+    "customer_zip": "11371",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "NB-MESH-041",
+        "quantity": 1
+      },
+      {
+        "product_code": "TU-QUAD-103",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-028",
+    "customer_zip": "90025",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "WK-4WH-012",
+        "quantity": 1
+      },
+      {
+        "product_code": "AB-LACE-094",
+        "quantity": 2
+      },
+      {
+        "product_code": "BB-POST-093",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-029",
+    "customer_zip": "10138",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "IM-SHLD-111",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-030",
+    "customer_zip": "60617",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "KS-AT-074",
+        "quantity": 1
+      },
+      {
+        "product_code": "AB-HING-095",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-031",
+    "customer_zip": "77050",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "OX-LIQ-028",
+        "quantity": 1
+      },
+      {
+        "product_code": "OX-TANK-D-027",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-032",
+    "customer_zip": "02127",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "SC-ROL-055",
+        "quantity": 1
+      },
+      {
+        "product_code": "RL-LW-059",
+        "quantity": 1
+      },
+      {
+        "product_code": "GL-TLK-083",
+        "quantity": 1
+      },
+      {
+        "product_code": "CR-PLT-070",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-033",
+    "customer_zip": "11221",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "TD-CERV-117",
+        "quantity": 1
+      },
+      {
+        "product_code": "CC-RIG-099",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-034",
+    "customer_zip": null,
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "WC-TRN-002",
+        "quantity": 1
+      },
+      {
+        "product_code": "CN-STD-063",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-035",
+    "customer_zip": "10454",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "PL-MAN-044",
+        "quantity": 1
+      },
+      {
+        "product_code": "HP-NECK-109",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-036",
+    "customer_zip": "60644",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "WK-FLD-015",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-037",
+    "customer_zip": "11373",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "NB-COMP-039",
+        "quantity": 1
+      },
+      {
+        "product_code": "BP-MAN-078",
+        "quantity": 1
+      },
+      {
+        "product_code": "OX-STAT-025",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-038",
+    "customer_zip": "77091",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "CM-ROL-052",
+        "quantity": 1
+      },
+      {
+        "product_code": "CN-QUAD-064",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-039",
+    "customer_zip": "10151",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "CPM-KNEE-114",
+        "quantity": 1
+      },
+      {
+        "product_code": "CP-STD-031",
+        "quantity": 1
+      },
+      {
+        "product_code": "NB-ULTR-040",
+        "quantity": 1
+      },
+      {
+        "product_code": "HB-BAR-021",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-040",
+    "customer_zip": "90045",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "WC-ELV-008",
+        "quantity": 1
+      },
+      {
+        "product_code": "WK-PLT-016",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-041",
+    "customer_zip": "02169",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "WK-BAR-013",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-042",
+    "customer_zip": "10469",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "SC-BAR-056",
+        "quantity": 1
+      },
+      {
+        "product_code": "GL-NC-084",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-043",
+    "customer_zip": "11253",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "CN-STD-063",
+        "quantity": 4
+      },
+      {
+        "product_code": "IM-UNI-112",
+        "quantity": 1
+      },
+      {
+        "product_code": "BB-LSO-091",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-044",
+    "customer_zip": "60626",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "WC-PED-005",
+        "quantity": 1
+      },
+      {
+        "product_code": "WK-PED-014",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-045",
+    "customer_zip": "77033",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "OX-PORT-024",
+        "quantity": 1
+      },
+      {
+        "product_code": "CC-PHIL-100",
+        "quantity": 1
+      },
+      {
+        "product_code": "CS-TH-15-087",
+        "quantity": 2
+      },
+      {
+        "product_code": "TD-LUMB-118",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-046",
+    "customer_zip": "10235",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "CP-MSK-NP-037",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-047",
+    "customer_zip": "02133",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "CR-FLD-071",
+        "quantity": 1
+      },
+      {
+        "product_code": "WK-2WH-011",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-048",
+    "customer_zip": "11419",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "HB-PED-022",
+        "quantity": 1
+      },
+      {
+        "product_code": "CM-BED-048",
+        "quantity": 1
+      },
+      {
+        "product_code": "BP-WRS-079",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-049",
+    "customer_zip": "90012",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "TU-WIRE-104",
+        "quantity": 1
+      },
+      {
+        "product_code": "AB-RIG-096",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-050",
+    "customer_zip": "60654",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "PL-STS-045",
+        "quantity": 1
+      },
+      {
+        "product_code": "WC-STD-001",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-051",
+    "customer_zip": "10271",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "OX-STAT-025",
+        "quantity": 1
+      },
+      {
+        "product_code": "NB-MESH-041",
+        "quantity": 1
+      },
+      {
+        "product_code": "CM-DROP-049",
+        "quantity": 1
+      },
+      {
+        "product_code": "BP-AUTO-077",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-052",
+    "customer_zip": "77055",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "WC-LW-003",
+        "quantity": 1
+      },
+      {
+        "product_code": "CN-OFF-065",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-053",
+    "customer_zip": "11360",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "WK-ROL-010",
+        "quantity": 1
+      },
+      {
+        "product_code": "GL-STD-081",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-054",
+    "customer_zip": "02191",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "SC-TUB-057",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-055",
+    "customer_zip": "10467",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "HP-ELEC-106",
+        "quantity": 1
+      },
+      {
+        "product_code": "AB-AIR-097",
+        "quantity": 1
+      },
+      {
+        "product_code": "KS-CMP-075",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-056",
+    "customer_zip": "10014",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "WC-STD-01",
+        "quantity": 1
+      },
+      {
+        "product_code": "CN-STD-063",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-057",
+    "customer_zip": "60637",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "RL-BAR-060",
+        "quantity": 1
+      },
+      {
+        "product_code": "SC-STD-053",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-058",
+    "customer_zip": "77077",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "CC-MIA-101",
+        "quantity": 1
+      },
+      {
+        "product_code": "CS-KH-20-086",
+        "quantity": 3
+      },
+      {
+        "product_code": "OX-TANK-E-026",
+        "quantity": 2
+      },
+      {
+        "product_code": "TD-OVER-119",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-059",
+    "customer_zip": "11225",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "CP-BI-032",
+        "quantity": 1
+      },
+      {
+        "product_code": "CP-MSK-FF-035",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-060",
+    "customer_zip": "10102",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "WC-REC-006",
+        "quantity": 1
+      },
+      {
+        "product_code": "RL-NAR-061",
+        "quantity": 1
+      },
+      {
+        "product_code": "IM-PORT-113",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-061",
+    "customer_zip": "02142",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "CR-BAR-072",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-062",
+    "customer_zip": "90036",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "HB-TRN-023",
+        "quantity": 1
+      },
+      {
+        "product_code": "PL-ELEC-043",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-063",
+    "customer_zip": "11357",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "NB-PED-042",
+        "quantity": 1
+      },
+      {
+        "product_code": "CN-FLD-066",
+        "quantity": 2
+      },
+      {
+        "product_code": "HP-MOIST-107",
+        "quantity": 1
+      },
+      {
+        "product_code": "WK-FLD-015",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-064",
+    "customer_zip": "60645",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "KS-BAR-076",
+        "quantity": 1
+      },
+      {
+        "product_code": "SC-TRNB-054",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-065",
+    "customer_zip": "10230",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "CP-AUTO-033",
+        "quantity": 1
+      },
+      {
+        "product_code": "NB-COMP-039",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-066",
+    "customer_zip": "77016",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "OX-PORT-024",
+        "quantity": 1
+      },
+      {
+        "product_code": "CN-STD-063",
+        "quantity": 1
+      },
+      {
+        "product_code": "WC-TRN-002",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-067",
+    "customer_zip": "11401",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "CR-AXL-068",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-068",
+    "customer_zip": "02164",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "WK-STD-009",
+        "quantity": 1
+      },
+      {
+        "product_code": "NB-ULTR-040",
+        "quantity": 1
+      },
+      {
+        "product_code": "AB-LACE-094",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-069",
+    "customer_zip": "10472",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "SC-ROL-055",
+        "quantity": 1
+      },
+      {
+        "product_code": "GL-CGM-082",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-070",
+    "customer_zip": "90028",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "BB-LUM-090",
+        "quantity": 1
+      },
+      {
+        "product_code": "AB-HING-095",
+        "quantity": 2
+      },
+      {
+        "product_code": "TU-PRO-105",
+        "quantity": 1
+      },
+      {
+        "product_code": "CS-ARM-089",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-071",
+    "customer_zip": "60655",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "KS-STD-073",
+        "quantity": 1
+      },
+      {
+        "product_code": "SC-BAR-056",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-072",
+    "customer_zip": "11235",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "TU-DUAL-102",
+        "quantity": 1
+      },
+      {
+        "product_code": "CM-BED-048",
+        "quantity": 1
+      },
+      {
+        "product_code": "CN-QUAD-064-XL",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-073",
+    "customer_zip": "10075",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "BP-AMB-080",
+        "quantity": 1
+      },
+      {
+        "product_code": "CS-TH-20-088",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-074",
+    "customer_zip": "77093",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "OX-LIQ-028",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-075",
+    "customer_zip": "02128",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "RL-OUT-062",
+        "quantity": 1
+      },
+      {
+        "product_code": "SC-STD-053",
+        "quantity": 1
+      },
+      {
+        "product_code": "CR-FOR-069",
+        "quantity": 1
+      },
+      {
+        "product_code": "GL-NC-084",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-076",
+    "customer_zip": "11415",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "WK-4WH-012",
+        "quantity": 1
+      },
+      {
+        "product_code": "CN-OFF-065",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-077",
+    "customer_zip": "10243",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "HB-MAN-019",
+        "quantity": 1
+      },
+      {
+        "product_code": "CM-FLD-051",
+        "quantity": 1
+      },
+      {
+        "product_code": "HP-IR-108",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-078",
+    "customer_zip": "60610",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "ZZZZZ-FAKE-999",
+        "quantity": 1
+      },
+      {
+        "product_code": "WK-ROL-010",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-079",
+    "customer_zip": "90034",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "CP-STD-031",
+        "quantity": 1
+      },
+      {
+        "product_code": "CP-MSK-NP-037",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-080",
+    "customer_zip": "11431",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "OX-CONS-029",
+        "quantity": 1
+      },
+      {
+        "product_code": "NB-COMP-039",
+        "quantity": 1
+      },
+      {
+        "product_code": "TU-QUAD-103",
+        "quantity": 1
+      },
+      {
+        "product_code": "BP-AUTO-077",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-081",
+    "customer_zip": "10456",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "PL-MAN-044-ECO",
+        "quantity": 1
+      },
+      {
+        "product_code": "HB-FUL-018",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-082",
+    "customer_zip": "77018",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "WC-STD-001-XL",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-083",
+    "customer_zip": "02110",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "SC-TUB-057",
+        "quantity": 1
+      },
+      {
+        "product_code": "RL-STD-058",
+        "quantity": 1
+      },
+      {
+        "product_code": "GL-TLK-083",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-084",
+    "customer_zip": "60627",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "WC-PWR-007",
+        "quantity": 1
+      },
+      {
+        "product_code": "KS-AT-074",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-085",
+    "customer_zip": "10046",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "WK-BAR-013-BAS",
+        "quantity": 1
+      },
+      {
+        "product_code": "CM-ROL-052",
+        "quantity": 1
+      },
+      {
+        "product_code": "CR-PLT-070",
+        "quantity": 1
+      },
+      {
+        "product_code": "KS-CMP-075",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-086",
+    "customer_zip": "11259",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "WK-2WH-011-XL",
+        "quantity": 1
+      },
+      {
+        "product_code": "CC-SOFT-098",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-087",
+    "customer_zip": "90019",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "CPM-SHLD-115",
+        "quantity": 1
+      },
+      {
+        "product_code": "BB-LSO-091-PRO",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-088",
+    "customer_zip": "10462",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "HP-NECK-109",
+        "quantity": 1
+      },
+      {
+        "product_code": "AB-AIR-097",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-089",
+    "customer_zip": "77074",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "OX-TANK-D-027",
+        "quantity": 5
+      },
+      {
+        "product_code": "CC-RIG-099",
+        "quantity": 1
+      },
+      {
+        "product_code": "CS-KH-15-085",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-090",
+    "customer_zip": "11382",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "NB-MESH-041",
+        "quantity": 1
+      },
+      {
+        "product_code": "WK-PED-014-PRO",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-091",
+    "customer_zip": "99999",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "WC-STD-001",
+        "quantity": 1
+      },
+      {
+        "product_code": "OX-PORT-024",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-092",
+    "customer_zip": "02138",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "CN-WHT-067",
+        "quantity": 1
+      },
+      {
+        "product_code": "WK-PLT-016",
+        "quantity": 1
+      },
+      {
+        "product_code": "CR-FLD-071",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-093",
+    "customer_zip": "60659",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "CM-BAR-050",
+        "quantity": 1
+      },
+      {
+        "product_code": "PL-PORT-047",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-094",
+    "customer_zip": "10169",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "HB-MAN-019-BAS",
+        "quantity": 1
+      },
+      {
+        "product_code": "IM-KNEE-110",
+        "quantity": 1
+      },
+      {
+        "product_code": "CP-HUM-038",
+        "quantity": 1
+      },
+      {
+        "product_code": "NB-PED-042",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-095",
+    "customer_zip": "11208",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "TD-CERV-117",
+        "quantity": 1
+      },
+      {
+        "product_code": "BB-TLSO-092",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-096",
+    "customer_zip": "77051",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "WC-BAR-004",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-097",
+    "customer_zip": "10198",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "CP-TRV-034",
+        "quantity": 1
+      },
+      {
+        "product_code": "OX-PULOX-030",
+        "quantity": 3
+      },
+      {
+        "product_code": "HB-LOW-020",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-098",
+    "customer_zip": "11405",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "GL-STD-081",
+        "quantity": 1
+      },
+      {
+        "product_code": "BP-WRS-079",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-099",
+    "customer_zip": "60610",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "PL-CEIL-046",
+        "quantity": 1
+      },
+      {
+        "product_code": "WC-ELV-008",
+        "quantity": 1
+      },
+      {
+        "product_code": "SC-ROL-055",
+        "quantity": 1
+      },
+      {
+        "product_code": "CM-DROP-049",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-100",
+    "customer_zip": "10007",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "BB-POST-093",
+        "quantity": 1
+      },
+      {
+        "product_code": "CPM-ANK-116",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "order_id": "TEST-101",
+    "customer_zip": "85001",
+    "mail_order": false,
+    "items": [
+      {
+        "product_code": "WC-STD-001",
+        "quantity": 1
+      },
+      {
+        "product_code": "OX-PORT-024",
+        "quantity": 1
+      }
+    ],
+    "notes": "Phoenix AZ — no specific local supplier, relies on nationwide. Compare with TEST-102."
+  },
+  {
+    "order_id": "TEST-102",
+    "customer_zip": "85001",
+    "mail_order": true,
+    "items": [
+      {
+        "product_code": "WC-STD-001",
+        "quantity": 1
+      },
+      {
+        "product_code": "OX-PORT-024",
+        "quantity": 1
+      }
+    ],
+    "notes": "Same as TEST-101 but mail_order=true — expands eligible suppliers to include non-local mail-order vendors."
+  }
+]

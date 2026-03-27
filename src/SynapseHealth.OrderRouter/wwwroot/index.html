@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Router - Synapse Health</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f7fa; color: #1a1a2e; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+        .container { max-width: 720px; width: 100%; padding: 2rem; }
+        h1 { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.25rem; }
+        .subtitle { color: #6b7280; font-size: 0.9rem; margin-bottom: 2rem; }
+        .card { background: #fff; border-radius: 12px; padding: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); margin-bottom: 1.5rem; }
+
+        /* Upload area */
+        .upload-area { border: 2px dashed #d1d5db; border-radius: 8px; padding: 2.5rem 1.5rem; text-align: center; cursor: pointer; transition: all 0.2s; }
+        .upload-area:hover, .upload-area.dragover { border-color: #3b82f6; background: #eff6ff; }
+        .upload-area input { display: none; }
+        .upload-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+        .upload-text { color: #6b7280; font-size: 0.9rem; }
+        .upload-text strong { color: #3b82f6; }
+        .file-info { margin-top: 0.75rem; font-size: 0.85rem; color: #374151; display: none; }
+
+        /* Mode toggle */
+        .mode-toggle { margin-top: 1.25rem; padding: 0.75rem 1rem; background: #f9fafb; border-radius: 8px; }
+        .toggle-label { display: flex; align-items: center; gap: 0.75rem; cursor: pointer; }
+        .toggle-text { font-weight: 600; font-size: 0.85rem; min-width: 100px; }
+        .toggle-desc { font-size: 0.8rem; color: #6b7280; }
+        .toggle-switch { position: relative; width: 44px; height: 24px; flex-shrink: 0; }
+        .toggle-switch input { opacity: 0; width: 0; height: 0; }
+        .toggle-slider { position: absolute; inset: 0; background: #10b981; border-radius: 999px; transition: 0.2s; }
+        .toggle-slider::before { content: ''; position: absolute; height: 18px; width: 18px; left: 3px; bottom: 3px; background: #fff; border-radius: 50%; transition: 0.2s; }
+        .toggle-switch input:checked + .toggle-slider { background: #ef4444; }
+        .toggle-switch input:checked + .toggle-slider::before { transform: translateX(20px); }
+
+        /* Button */
+        .btn { display: inline-block; padding: 0.65rem 1.5rem; border-radius: 8px; border: none; font-size: 0.9rem; font-weight: 500; cursor: pointer; transition: all 0.15s; }
+        .btn-primary { background: #3b82f6; color: #fff; }
+        .btn-primary:hover { background: #2563eb; }
+        .btn-primary:disabled { background: #93c5fd; cursor: not-allowed; }
+        .btn-download { background: #10b981; color: #fff; text-decoration: none; }
+        .btn-download:hover { background: #059669; }
+        .actions { margin-top: 1.25rem; text-align: center; }
+
+        /* Progress */
+        .progress-section { display: none; }
+        .progress-bar-bg { background: #e5e7eb; border-radius: 999px; height: 12px; overflow: hidden; margin: 1rem 0; }
+        .progress-bar-fill { background: linear-gradient(90deg, #3b82f6, #6366f1); height: 100%; border-radius: 999px; width: 0%; transition: width 0.3s ease; }
+        .progress-status { font-size: 0.85rem; color: #6b7280; text-align: center; }
+
+        /* Results */
+        .results-section { display: none; }
+        .stats { display: flex; gap: 1rem; margin-bottom: 1.25rem; }
+        .stat { flex: 1; text-align: center; padding: 1rem; border-radius: 8px; }
+        .stat-processed { background: #ecfdf5; }
+        .stat-failed { background: #fef2f2; }
+        .stat-warnings { background: #fffbeb; }
+        .stat-number { font-size: 1.75rem; font-weight: 700; }
+        .stat-processed .stat-number { color: #059669; }
+        .stat-failed .stat-number { color: #dc2626; }
+        .stat-warnings .stat-number { color: #d97706; }
+        .stat-label { font-size: 0.75rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.25rem; }
+
+        /* Dead letter table */
+        .dead-letter { margin-top: 1rem; }
+        .warnings-section { margin-top: 1rem; }
+        .warnings-section h3 { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .warnings-section table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+        .warnings-section th, .warnings-section td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid #f3f4f6; }
+        .warnings-section th { color: #6b7280; font-weight: 500; }
+        .dead-letter h3 { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; color: #dc2626; }
+        .dead-letter table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+        .dead-letter th, .dead-letter td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid #f3f4f6; }
+        .dead-letter th { color: #6b7280; font-weight: 500; }
+
+        /* Result download */
+        .download-section { text-align: center; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid #f3f4f6; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Order Router</h1>
+        <p class="subtitle">Upload an order JSON file to route orders to suppliers</p>
+
+        <!-- Upload Card -->
+        <div class="card" id="uploadCard">
+            <div class="upload-area" id="dropZone">
+                <div class="upload-icon">&#128195;</div>
+                <div class="upload-text">
+                    Drag &amp; drop your order file here, or <strong>click to browse</strong>
+                </div>
+                <div class="upload-text" style="margin-top: 0.25rem; font-size: 0.8rem;">
+                    Accepts single order or array of orders (.json)
+                </div>
+                <input type="file" id="fileInput" accept=".json">
+            </div>
+            <div class="file-info" id="fileInfo"></div>
+            <div class="mode-toggle">
+                <label class="toggle-label">
+                    <span class="toggle-text" id="modeLabel">Strict Mode</span>
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="strictToggle" checked>
+                        <span class="toggle-slider"></span>
+                    </div>
+                    <span class="toggle-desc" id="modeDesc">Exact product code match only - no fuzzy correction for typos</span>
+                </label>
+            </div>
+            <div class="actions">
+                <button class="btn btn-primary" id="routeBtn" disabled>Route Orders</button>
+            </div>
+        </div>
+
+        <!-- Progress Card -->
+        <div class="card progress-section" id="progressSection">
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="progressBar"></div>
+            </div>
+            <div class="progress-status" id="progressStatus">Preparing...</div>
+        </div>
+
+        <!-- Results Card -->
+        <div class="card results-section" id="resultsSection">
+            <div class="stats">
+                <div class="stat stat-processed">
+                    <div class="stat-number" id="statProcessed">0</div>
+                    <div class="stat-label">Processed</div>
+                </div>
+                <div class="stat stat-failed">
+                    <div class="stat-number" id="statFailed">0</div>
+                    <div class="stat-label">Failed</div>
+                </div>
+                <div class="stat stat-warnings">
+                    <div class="stat-number" id="statWarnings">0</div>
+                    <div class="stat-label">Warnings</div>
+                </div>
+            </div>
+            <div class="dead-letter" id="deadLetterSection" style="display:none;">
+                <h3>Failed Orders (Dead Letter)</h3>
+                <table>
+                    <thead><tr><th>Order ID</th><th>Errors</th></tr></thead>
+                    <tbody id="deadLetterBody"></tbody>
+                </table>
+            </div>
+            <div class="warnings-section" id="warningsSection" style="display:none;">
+                <h3 style="color: #d97706;">Warnings (Auto-Corrected)</h3>
+                <table>
+                    <thead><tr><th>Order ID</th><th>Warnings</th></tr></thead>
+                    <tbody id="warningsBody"></tbody>
+                </table>
+            </div>
+            <div class="download-section">
+                <a class="btn btn-download" id="downloadBtn" href="#">Download Full Results (.json)</a>
+                <div style="margin-top: 0.5rem;">
+                    <a class="btn btn-primary" href="#" id="resetBtn" style="background:#6b7280;">Upload Another File</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const dropZone = document.getElementById('dropZone');
+        const fileInput = document.getElementById('fileInput');
+        const fileInfo = document.getElementById('fileInfo');
+        const routeBtn = document.getElementById('routeBtn');
+        const progressSection = document.getElementById('progressSection');
+        const progressBar = document.getElementById('progressBar');
+        const progressStatus = document.getElementById('progressStatus');
+        const resultsSection = document.getElementById('resultsSection');
+        const uploadCard = document.getElementById('uploadCard');
+
+        let selectedFile = null;
+        let resultBlob = null;
+        const strictToggle = document.getElementById('strictToggle');
+        const modeLabel = document.getElementById('modeLabel');
+        const modeDesc = document.getElementById('modeDesc');
+
+        strictToggle.addEventListener('change', () => {
+            if (strictToggle.checked) {
+                modeLabel.textContent = 'Strict Mode';
+                modeDesc.textContent = 'Exact product code match only — no fuzzy correction for typos';
+            } else {
+                modeLabel.textContent = 'Resilient Mode';
+                modeDesc.textContent = 'Fuzzy matching & nationwide fallback enabled';
+            }
+        });
+
+        // Drag & drop
+        dropZone.addEventListener('click', () => fileInput.click());
+        dropZone.addEventListener('dragover', e => { e.preventDefault(); dropZone.classList.add('dragover'); });
+        dropZone.addEventListener('dragleave', () => dropZone.classList.remove('dragover'));
+        dropZone.addEventListener('drop', e => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            if (e.dataTransfer.files.length) handleFile(e.dataTransfer.files[0]);
+        });
+        fileInput.addEventListener('change', () => { if (fileInput.files.length) handleFile(fileInput.files[0]); });
+
+        function handleFile(file) {
+            if (!file.name.endsWith('.json')) {
+                alert('Please upload a .json file');
+                return;
+            }
+            selectedFile = file;
+            fileInfo.style.display = 'block';
+            fileInfo.textContent = `Selected: ${file.name} (${(file.size / 1024).toFixed(1)} KB)`;
+            routeBtn.disabled = false;
+        }
+
+        // Route button
+        routeBtn.addEventListener('click', async () => {
+            if (!selectedFile) return;
+            routeBtn.disabled = true;
+
+            const text = await selectedFile.text();
+            let orders;
+            try {
+                orders = JSON.parse(text);
+            } catch (e) {
+                alert('Invalid JSON file: ' + e.message);
+                routeBtn.disabled = false;
+                return;
+            }
+
+            const isStrict = strictToggle.checked;
+            const isBatch = Array.isArray(orders);
+
+            // Inject strict flag into each order
+            if (isBatch) {
+                orders.forEach(o => o.strict = isStrict);
+            } else {
+                orders.strict = isStrict;
+            }
+
+            const totalOrders = isBatch ? orders.length : 1;
+
+            // Show progress
+            uploadCard.style.display = 'none';
+            progressSection.style.display = 'block';
+            progressBar.style.width = '0%';
+            progressStatus.textContent = `Routing ${totalOrders} order${totalOrders > 1 ? 's' : ''}...`;
+
+            // Animate progress during request
+            let progress = 0;
+            const progressInterval = setInterval(() => {
+                // Ease toward 90% while waiting
+                progress += (90 - progress) * 0.05;
+                progressBar.style.width = progress + '%';
+                progressStatus.textContent = `Processing... ${Math.round(progress)}%`;
+            }, 100);
+
+            try {
+                const response = await fetch('/api/route', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(orders)
+                });
+                const result = await response.json();
+
+                clearInterval(progressInterval);
+                progressBar.style.width = '100%';
+                progressStatus.textContent = 'Complete!';
+
+                setTimeout(() => showResults(result, isBatch, totalOrders), 500);
+            } catch (err) {
+                clearInterval(progressInterval);
+                progressBar.style.width = '100%';
+                progressBar.style.background = '#dc2626';
+                progressStatus.textContent = 'Error: ' + err.message;
+            }
+        });
+
+        function showResults(result, isBatch, totalOrders) {
+            progressSection.style.display = 'none';
+            resultsSection.style.display = 'block';
+
+            let processed, failed, warnings, deadLetter;
+
+            if (isBatch) {
+                processed = result.processed || 0;
+                failed = result.failed || 0;
+                warnings = (result.results || []).reduce((n, r) => n + (r.warnings ? r.warnings.length : 0), 0);
+                deadLetter = result.dead_letter || [];
+            } else {
+                processed = result.feasible ? 1 : 0;
+                failed = result.feasible ? 0 : 1;
+                warnings = result.warnings ? result.warnings.length : 0;
+                deadLetter = result.feasible ? [] : [{ order: { order_id: result.order_id || '?' }, errors: result.errors || [] }];
+            }
+
+            document.getElementById('statProcessed').textContent = processed;
+            document.getElementById('statFailed').textContent = failed;
+            document.getElementById('statWarnings').textContent = warnings;
+
+            // Dead letter table
+            const dlSection = document.getElementById('deadLetterSection');
+            const dlBody = document.getElementById('deadLetterBody');
+            dlBody.innerHTML = '';
+            if (deadLetter.length > 0) {
+                dlSection.style.display = 'block';
+                deadLetter.forEach(dl => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td>${dl.order.order_id || '?'}</td><td>${(dl.errors || []).join('; ')}</td>`;
+                    dlBody.appendChild(tr);
+                });
+            }
+
+            // Warnings table
+            const warnSection = document.getElementById('warningsSection');
+            const warnBody = document.getElementById('warningsBody');
+            warnBody.innerHTML = '';
+            let warningEntries = [];
+            if (isBatch) {
+                (result.results || []).forEach(r => {
+                    if (r.warnings && r.warnings.length > 0) {
+                        warningEntries.push({ orderId: r.order_id || '?', warnings: r.warnings });
+                    }
+                });
+            } else {
+                if (result.warnings && result.warnings.length > 0) {
+                    warningEntries.push({ orderId: result.order_id || '?', warnings: result.warnings });
+                }
+            }
+            if (warningEntries.length > 0) {
+                warnSection.style.display = 'block';
+                warningEntries.forEach(w => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `<td>${w.orderId}</td><td>${w.warnings.join('; ')}</td>`;
+                    warnBody.appendChild(tr);
+                });
+            }
+
+            // Download button
+            const blob = new Blob([JSON.stringify(result, null, 2)], { type: 'application/json' });
+            resultBlob = URL.createObjectURL(blob);
+            const downloadBtn = document.getElementById('downloadBtn');
+            downloadBtn.href = resultBlob;
+            downloadBtn.download = `route_results_${new Date().toISOString().slice(0,19).replace(/[:-]/g,'')}.json`;
+        }
+
+        // Reset
+        document.getElementById('resetBtn').addEventListener('click', e => {
+            e.preventDefault();
+            resultsSection.style.display = 'none';
+            uploadCard.style.display = 'block';
+            selectedFile = null;
+            fileInput.value = '';
+            fileInfo.style.display = 'none';
+            routeBtn.disabled = true;
+            progressBar.style.width = '0%';
+            progressBar.style.background = '';
+            document.getElementById('deadLetterSection').style.display = 'none';
+            document.getElementById('warningsSection').style.display = 'none';
+            if (resultBlob) URL.revokeObjectURL(resultBlob);
+        });
+    </script>
+</body>
+</html>

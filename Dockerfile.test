@@ -1,0 +1,10 @@
+FROM mcr.microsoft.com/dotnet/sdk:10.0-preview
+WORKDIR /src
+
+COPY SynapseHealth.sln .
+COPY src/SynapseHealth.OrderRouter/SynapseHealth.OrderRouter.csproj src/SynapseHealth.OrderRouter/
+COPY tests/SynapseHealth.OrderRouter.Tests/SynapseHealth.OrderRouter.Tests.csproj tests/SynapseHealth.OrderRouter.Tests/
+RUN dotnet restore
+
+COPY . .
+ENTRYPOINT ["dotnet", "test", "--logger:console;verbosity=normal"]
